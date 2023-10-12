@@ -22,7 +22,7 @@
 
         @include lg {
             display: grid;
-            margin-bottom: 0px;
+            // margin-bottom: 0px;
             gap: 50px;
             grid-template-columns: 1fr 1fr 1fr;
             justify-items: flex-end;

@@ -535,7 +535,6 @@
 @media screen and (max-width: 991px) {
   .section__partners_brands {
     display: grid;
-    margin-bottom: 0px;
     gap: 50px;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: flex-end;
