@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" ID="head">
         <div class="header__inner">
             <img class="logo" src="./logo.png" alt="Логотип" />
             <nav class="header__nav">
@@ -30,13 +30,25 @@
                 </ul>
             </nav>
             <div class="flex">
-                <button class=" button--small header__login-button">
+                <button class="button--small header__login-button" onclick="document.getElementById('expansion-body').classList.toggle('expansion-hide')">
                     Login
                 </button>
-                <button class="header__mobile-button">
-                    <img class="header__mobile-icon" src="./alt_menu.svg" alt="Иконка мобильного меню" />
+                <button class="header__mobile-button mobile-menu">
+                    <img class="header__mobile-button-icon burger" src="./alt_menu.svg" alt="Иконка мобильного меню" />
+                    <img class="header__mobile-button-icon close invisible" src="./ico_close.svg" alt="закрыть" />
                 </button>
             </div>
+        </div>
+        <div class="header__list-menu container invisible" ID="expansion-body">
+            <ul class="header__list-menu list">
+                <li><a href="#" class="header__list-menu href">Home</a></li>
+                <li><a href="#" class="header__list-menu href">Product</a></li>
+                <li><a href="#" class="header__list-menu href">About</a></li>
+                <li><a href="#" class="header__list-menu href">Contact</a></li>
+                <button class="header__list-menu__login-button button--small">
+                    Login
+                </button>
+            </ul>
         </div>
     </header>
 
@@ -164,18 +176,22 @@
             </div>
             <div class="section__gallery-grid">
                 <div class="img1"><img src="./gallery_quadro.jpg" alt="quadrocopter" class="img_gallery"></div>
-                <div class="img2"><img src="./gallery_ipad.jpg" alt="ipad"  class="img_gallery"></div>
-                <div class="img3"><img src="./gallery_two-people.jpg" alt="two people"  class="img_gallery"></div>
-                <div class="img4"><img src="./gallery_macbook.jpg" alt="macbook"  class="img_gallery"></div>
-                <div class="img5"><img src="./gallery_code.jpg" alt="code"  class="img_gallery"></div>
-                <div class="img6"><img src="./gallery_notebook.jpg" alt="notebook"  class="img_gallery"></div>
-                <div class="img7"><img src="./gallery_canon.jpg" alt="canon"  class="img_gallery"></div>
+                <div class="img2"><img src="./gallery_ipad.jpg" alt="ipad" class="img_gallery"></div>
+                <div class="img3"><img src="./gallery_two-people.jpg" alt="two people" class="img_gallery"></div>
+                <div class="img4"><img src="./gallery_macbook.jpg" alt="macbook" class="img_gallery"></div>
+                <div class="img5"><img src="./gallery_code.jpg" alt="code" class="img_gallery"></div>
+                <div class="img6"><img src="./gallery_notebook.jpg" alt="notebook" class="img_gallery"></div>
+                <div class="img7"><img src="./gallery_canon.jpg" alt="canon" class="img_gallery"></div>
             </div>
             <div class="section__gallery-grid2">
-                <div class="section__gallery-grid2--img"><img src="./gallery_quadro.jpg" alt="quadrocopter" class="img_gallery"></div>
-                <div class="section__gallery-grid2--img"><img src="./gallery_headphone.jpg" alt="headphone" class="img_gallery"></div>
-                <div class="section__gallery-grid2--img"><img src="./gallery_work.jpg" alt="work" class="img_gallery"></div>
-                <div class="section__gallery-grid2--img"><img src="./gallery_close_notebook.jpg" alt="close notebook" class="img_gallery"></div>
+                <div class="section__gallery-grid2--img"><img src="./gallery_quadro.jpg" alt="quadrocopter"
+                        class="img_gallery"></div>
+                <div class="section__gallery-grid2--img"><img src="./gallery_headphone.jpg" alt="headphone"
+                        class="img_gallery"></div>
+                <div class="section__gallery-grid2--img"><img src="./gallery_work.jpg" alt="work" class="img_gallery">
+                </div>
+                <div class="section__gallery-grid2--img"><img src="./gallery_close_notebook.jpg" alt="close notebook"
+                        class="img_gallery"></div>
             </div>
             <div>
                 <a href="#" class="href-button button">See more</a>
@@ -340,6 +356,7 @@
             </div>
         </section>
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
