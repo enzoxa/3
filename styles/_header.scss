@@ -1,0 +1,133 @@
+.header {
+  justify-content: center;
+  padding-top: 34px;
+  margin-bottom: 120px;
+  flex-direction: column;
+
+  background-color: var(--bg-color);
+
+
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include xl {
+      padding-left: 34px;
+      padding-right: 16px;
+    }
+
+    @media screen and (max-width: $xl) {
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    margin-right: 136px;
+
+    @media screen and (max-width: $xl) {
+      margin-right: 0;
+    }
+  }
+
+  &__nav {
+    margin-right: 174px;
+
+    @include xl {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px;
+  }
+
+  &__mobile-button {
+    display: none;
+    margin-left: 15px;
+    background-color: inherit;
+
+    @include xl {
+      display: block;
+    }    
+
+    &-icon {
+      height: 50px;
+
+      &.invisible {
+        display: none;
+      }
+    }
+  }
+
+  &__login-button {
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__list-menu {
+    z-index: 1;
+    margin-top: 20px;
+    
+    
+    &.container {
+      padding-top: 50px;
+      display: block;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      
+      background-color: gray;      
+
+      &.invisible {
+        display: none;
+      }
+
+      &.expansion-show {
+        transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+      }
+
+      &.expansion-hide {
+        transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+      }
+
+      @media screen and (min-width: $xl) {
+        display: none;        
+      }
+      
+    }
+
+    &.list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      
+    }
+
+    &__login-button {
+      @media screen and (min-width: $sm) {
+        display: none;
+      }
+    }
+  }
+}
+
+.expansion-hide {
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);    
+}

@@ -1,0 +1,77 @@
+.section__cta {
+    margin: 80px;
+    padding: 80px 0px;
+    display: flex;
+    justify-content: space-around;    
+
+    @include lg {
+        margin: 0px;
+    }
+
+    &_container {
+        background: #343434;
+        height: 370px;
+        border-radius: 34px;
+        display: flex;        
+
+        justify-content: space-between;
+        overflow: hidden;
+
+        @include lg {
+            flex-direction: column;
+            border-radius: 0;
+            height: 100%;
+            background: #1E1E1E;
+        }
+
+        &_left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 38px;
+            padding: 18px 94px;
+
+            @include lg {
+                align-items: center;
+                padding: 104px 66px;
+                margin: 0px 120px;
+            }
+
+            @include xxl {
+                padding: 104px 10px;
+            }
+
+            &--headline {
+                color: white;
+                font-size: 52px;
+                font-weight: 400;
+                line-height: 62px;
+                letter-spacing: 0.20px;
+                text-align: left;
+                word-wrap: break-word;
+
+                @include lg {
+                    text-align: center;
+                    padding: 10px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &_right {
+            display: flex;
+            right: 0;
+            margin-left: 86px;
+
+            @include lg {
+                margin-left: 0px;
+                content: url("../line_chart1.jpg");
+                padding: 0px 80px;
+            }
+        }
+    }
+}

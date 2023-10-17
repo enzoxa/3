@@ -1,0 +1,36 @@
+.section__partners {
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;    
+
+    &_title {
+        margin-bottom: 0px;
+        padding: 10px;
+    }
+
+    &_subtitle {
+        padding: 10px;
+        margin-bottom: 50px;   
+    }
+
+    &_brands {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;        
+        gap: 74px;        
+
+        @include lg {
+            display: grid;
+            // margin-bottom: 0px;
+            gap: 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: flex-end;
+        }
+
+        &-row {            
+            
+            align-items: center;
+        }
+    }
+}
